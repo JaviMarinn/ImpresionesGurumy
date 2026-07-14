@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Order | IMPRESIONES GURUMY</title>
+    <meta name="description" content="Envía tu pedido online, sube archivos y solicita una cotización rápida a IMPRESIONES GURUMY." />
+    <meta property="og:title" content="Pedido online IMPRESIONES GURUMY" />
+    <meta property="og:description" content="Sube tus archivos y recibe una cotización profesional en minutos." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <div class="page-loader" aria-hidden="true"><div class="page-loader__ring"></div></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.svg" alt="Logo de IMPRESIONES GURUMY" loading="eager" />
+          <span>IMPRESIONES GURUMY</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="online-order.html" class="btn btn-outline active">Online Order</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">PEDIDO ONLINE</p>
+          <h1>Sube tus archivos y solicita tu cotización en minutos.</h1>
+          <p>Recepción rápida de pedidos y respuesta ágil para confirmar materiales, cantidades y entregas.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <form class="card form-card reveal" id="order-form" novalidate>
+            <div class="field-grid">
+              <label>Nombre completo<input type="text" id="name" name="name" placeholder="Tu nombre" required /></label>
+              <label>Correo<input type="email" id="email" name="email" placeholder="tucorreo@email.com" required /></label>
+              <label>Teléfono<input type="tel" id="phone" name="phone" placeholder="300 000 0000" required /></label>
+              <label>Servicio<select id="service" name="service"><option>Impresión</option><option>Fotocopias</option><option>Escaneo</option><option>Laminado</option><option>Encuadernado</option><option>Diseño gráfico</option><option>Edición de documentos</option></select></label>
+              <label>Tamaño de papel<select id="paper-size" name="paper-size"><option>Letter</option><option>Legal</option><option>A4</option></select></label>
+              <label>Color<select id="color" name="color"><option>Color</option><option>Black & White</option></select></label>
+              <label>Orientación<select id="sides" name="sides"><option>Single-sided</option><option>Double-sided</option></select></label>
+              <label>Copias<input type="number" id="copies" name="copies" min="1" value="1" required /></label>
+              <label class="full">Comentarios<textarea id="comments" name="comments" rows="5" placeholder="Indica tipo de material, cantidad, tamaño, fecha de entrega y observaciones."></textarea></label>
+              <label class="full">
+                Subir archivo
+                <div class="upload-area" id="upload-area">
+                  <strong>Arrastra y suelta tus archivos aquí</strong>
+                  <small>Formatos permitidos: PDF, DOCX, PPTX, XLSX, JPG, PNG</small>
+                  <input type="file" id="file-input" name="file" accept=".pdf,.docx,.pptx,.xlsx,.jpg,.jpeg,.png" />
+                </div>
+                <div id="selected-file" class="form-status">Ningún archivo seleccionado.</div>
+              </label>
+            </div>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>IMPRESIONES GURUMY</h3>
+          <p>Imprenta moderna con enfoque en diseño, precisión y servicio ágil.</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/573132517288">+57 313 251 7288</a></li>
+            <li><a href="https://wa.me/573043942994">+57 304 394 2994</a></li>
+            <li><a href="https://wa.me/573013783368">+57 301 378 3368</a></li>
+            <li><a href="mailto:supportimpresionesgurumy@gmail.com">supportimpresionesgurumy@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Redes</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/ImpresionesGurumyOficial">@ImpresionesGurumyOficial</a></li>
+            <li><a href="contact.html">Solicitar visita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container legal-note">
+        <p>© Emmanuel Pérez Marín & Pilar Marín. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/573132517288" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">💬</a>
+    <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
